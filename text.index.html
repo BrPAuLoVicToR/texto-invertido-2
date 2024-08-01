@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .vermelho{
+
+        color:red
+      }
+
+      .btr{
+        margin: 20px;
+        border: 30px;
+        text-align: justify;
+        color:rgb(42, 0, 141)
+      }
+
+    </style>
+    <script>
+       
+        function inverterTexto() {
+            
+            var textoOriginal = document.getElementById('inputOriginal').value;
+       
+            var textoInvertido = textoOriginal.split('').reverse().join('');
+            
+            document.getElementById('inputInvertido').value = textoInvertido;
+        }
+    </script>
+</head>
+<body>
+    <h1 class="vermelho">Formulário para inverter texto</h1>
+
+    <label for="inputOriginal">Texto Original:</label>
+
+    <input type="text" id="inputOriginal">
+    <br><br>
+
+    <button class="btr" onclick="inverterTexto()">Inverter Texto</button>
+    <br><br>
+
+    <label for="inputInvertido">Texto Invertido:</label>
+    <input type="text" id="inputInvertido" readonly>
+</body>
+</html>
